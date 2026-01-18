@@ -163,9 +163,10 @@ return {
     -- Using netcoredbg from mason
     dap.adapters.coreclr = {
       type = 'executable',
-      command = vim.fn.stdpath 'data' .. '/mason/bin/netcoredbg',
+      command = vim.fn.stdpath 'data' .. '/mason/bin/netcoredbg' .. (vim.fn.has 'win32' == 1 and '.exe' or ''),
       args = { '--interpreter=vscode' },
     }
+
     dap.configurations.cs = {
       {
         type = 'coreclr',
