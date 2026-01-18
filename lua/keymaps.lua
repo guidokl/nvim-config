@@ -1,6 +1,10 @@
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
+-- My Keybinds
+-- Save and Run C# project
+vim.keymap.set('n', '<leader>rr', ':w<CR>:!dotnet run<CR>', { desc = '[R]un C# Project' })
+
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
